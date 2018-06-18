@@ -1,0 +1,4 @@
+https://github.com/Gazer/take-a-photo
+
+https://www.rubydoc.info/gems/qrscanner/0.4.1
+https://github.com/andys/qrscanner
