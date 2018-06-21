@@ -1,0 +1,13 @@
+<div>
+  <h1>RTC Card</h1>
+  <%= form_with scope: :rtc_card, local: true do |form| %>
+    <p>
+      <%= form.label :number %> <%= form.label @rtc_number %><br>
+    </p>
+
+    <p>
+      <%= form.submit 'Save' %>
+    </p>
+  <% end %>
+
+</div>
