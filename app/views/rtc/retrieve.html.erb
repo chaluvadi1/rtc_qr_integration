@@ -1,8 +1,11 @@
 <div>
   <h1>RTC Card</h1>
-  <%= form_with scope: :rtc_card, local: true do |form| %>
+  <%= form_for(@card) do |form| %>
     <p>
-      <%= form.label :number %> <%= form.label @rtc_number %><br>
+      Number: <%= form.label @card.number %><br>
+      Status: <%= form.select :status, options_for_select(['New','Begin Analysis','Start Working','Set Done'], selected: @card.status) %><br>
+      Points: <%= form.select :points, options_for_select([0,1,3,5,8,13,21,34,55,89,144],selected: @card.points)%><br>
+
     </p>
 
     <p>
