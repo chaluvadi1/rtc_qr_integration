@@ -13,4 +13,25 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery3
+//= require popper
+//= require bootstrap
+
+//= require ./grid.js
+//= require ./version.js
+//= require ./detector.js
+//= require ./formatinf.js
+//= require ./errorlevel.js
+//= require ./bitmat.js
+//= require ./datablock.js
+//= require ./bmparser.js
+//= require ./datamask.js
+//= require ./rsdecoder.js
+//= require ./rsdecoder.js
+//= require ./gf256.js
+//= require ./decoder.js
+//= require ./qrcode.js
+//= require ./findpat.js
+//= require ./alignpat.js
+//= require ./databr.js
 //= require_tree .
