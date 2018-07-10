@@ -11,10 +11,10 @@
   <%= button_to "QR Code", {:pages => 'qr_code'} %>
 
   <h1>Enter RTC Number</h1>
-  <%= form_with scope: :rtc_card, local: true do |form| %>
+  <%= form_with scope: :card do |form| %>
     <p>
-      <%= form.label :number %><br>
-      <%= form.text_field :number %><br>
+      Number
+      <%= form.text_field :number%><br>
     </p>
 
     <p>
