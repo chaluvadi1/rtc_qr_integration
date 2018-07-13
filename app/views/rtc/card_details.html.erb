@@ -1,0 +1,195 @@
+<div class="">
+  <%= form_with model: @card do |form| %>
+    <div class="panel panel-default">
+      <div class="row text-left">
+        <div class="col-md-12">
+          <%= image_tag "tech_card_icon.PNG", class: 'img-responsive' %>
+          <%= @card.card_type %>
+          <%= form.label @card.number %>
+          <%= image_tag "icons.PNG", class: 'img-responsive' %>
+          <%= form.submit 'Save' %>
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-12">
+          Summary: <span style="color: red">*</span>
+          <%= form.text_field :summary, placeholder: @card.summary %>
+          <%= form.select :status, options_for_select(['New', 'Begin Analysis', 'Start Working', 'Set Done'], selected: @card.status) %>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <%= image_tag "tabs.PNG", class: 'img-responsive' %>
+    </div>
+    <div class="panel panel-default">
+      <div class="row text-left">
+        <div class="col-md-2">
+          Type:
+        </div>
+        <div class="col-md-4">
+          <%= form.select :card_type, options_for_select(['Story Card', 'Technical Card'], selected: @card.status) %>
+        </div>
+        <div class="col-md-2">
+          Created By:
+        </div>
+        <div class="col-md-4">
+          <span style="color: lightskyblue">Macklin, Brent A</span>
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Filed Against: <span style="color: red">*</span>
+        </div>
+        <div class="col-md-4">
+          <%= form.select :team_name, options_for_select(['Shenanigans'], selected: 'Shenanigans') %>
+        </div>
+        <div class="col-md-2">
+          Tags:
+        </div>
+        <div class="col-md-4">
+          <input type="text">
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Nationwide Project:
+        </div>
+        <div class="col-md-4">
+          <%= form.select :project_name, options_for_select(['DVA'], selected: 'DVA') %>
+        </div>
+        <div class="col-md-2">
+          Owned By:
+        </div>
+        <div class="col-md-4">
+          <%= form.select :team_name, options_for_select(['Shane, Andrew'], selected: @card.owner) %>
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Application:
+        </div>
+        <div class="col-md-4">
+          <%= form.select :application, options_for_select(['Unassigned'], selected: 'Unassigned') %>
+        </div>
+        <div class="col-md-2">
+          Priority:
+        </div>
+        <div class="col-md-4">
+          <select></select>
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Size Estimate:
+        </div>
+        <div class="col-md-4">
+          <%= form.select :application, options_for_select(['Unassigned'], selected: 'Unassigned') %>
+        </div>
+        <div class="col-md-2">
+          Blocked:
+        </div>
+        <div class="col-md-4">
+          <%= form.check_box(:blocked, {}, true) %>
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Story Points:
+        </div>
+        <div class="col-md-4">
+          <%= form.select :points, options_for_select([0, 1, 3, 5, 8, 13, 21, 34, 55, 89, 144], selected: @card.points) %>
+        </div>
+        <div class="col-md-2">
+          Ready for Development:
+        </div>
+        <div class="col-md-4">
+           <input type="checkbox">
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Business Value Points:
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Solution Type:
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Progress:
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Project Area:
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Team Area:
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-2">
+          Create Date:
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

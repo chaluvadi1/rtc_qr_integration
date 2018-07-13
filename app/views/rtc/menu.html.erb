@@ -1,31 +1,5 @@
-<%= stylesheet_link_tag "rtc" %>
-
-<div class="full-width-div">
-  <div class="container-max-width">
-    <div class="row" style="background-color: #2e5589">
-      <div class="col-md-12">
-        <%= image_tag "dashboard_top.PNG", class: 'img-responsive' %>
-      </div>
-    </div>
-
-    <div class="row" style="background-color: #2e5589">
-      <div class="col-md-11 text-left">
-        <%= image_tag "dashboard_bottom.PNG", class: 'img-responsive' %>
-      </div>
-      <div class="col-md-1 no-padding">
-        <div class="col-sm-10 no-horizontal-padding right-inner-addon">
-          <%= form_with scope: @card, url: post_card_path do |form| %>
-            <%= form.text_field :number, class: 'form-control input-xs', placeholder: 'Search Work Items' %>
-            <i class="glyphicon glyphicon-search form-control-feedback search"></i>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-    <div class="row" style="background-color: #2e5589">
-      <div class="col-lg-12">
-        <%= image_tag "dashboard_body.PNG", class: 'img-responsive' %>
-      </div>
-    </div>
+<div class="row" style="background-color: #2e5589">
+  <div class="col-lg-12">
+    <%= image_tag "dashboard_body.PNG", class: 'img-responsive' %>
   </div>
 </div>

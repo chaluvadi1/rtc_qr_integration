@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get '/menu' => 'mobile#menu'
   get '/rtc' => 'rtc#menu'
   # post '/menu' => 'rtc#qr_code'
-  get '/rtc/:number' => 'rtc#retrieve', as: :card
-  get '/mobile/:number' => 'mobile#retrieve', as: :mobile_card
+  get '/rtc/:number' => 'rtc#card_details', as: :card
+  get '/mobile/:number' => 'mobile#card_details', as: :mobile_card
   post '/menu' => 'mobile#menu', as: :post_card_mobile
   post '/rtc' => 'rtc#menu', as: :post_card
   patch '/rtc/:number' => 'rtc#update'

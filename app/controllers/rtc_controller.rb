@@ -1,4 +1,6 @@
 class RtcController < ApplicationController
+  # layout 'rtc'
+  
   def menu
     rtc_number = params[:number]
     unless rtc_number.nil?
@@ -15,7 +17,7 @@ class RtcController < ApplicationController
     # end
   end
 
-  def retrieve
+  def card_details
     @card = Card.find(params[:number])
   end
 
@@ -29,6 +31,6 @@ class RtcController < ApplicationController
 
   private
   def card_params
-    params.require(:card).permit(:status, :points)
+    params.require(:card).permit(:summary, :card_type, :status, :points, :owner, :blocked, :iteration)
   end
 end

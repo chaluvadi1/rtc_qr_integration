@@ -13,8 +13,13 @@
 ActiveRecord::Schema.define(version: 2018_06_26_174507) do
 
   create_table "cards", primary_key: "number", force: :cascade do |t|
+    t.string "summary"
+    t.string "card_type"
     t.string "status"
     t.integer "points"
+    t.string "owner"
+    t.boolean "blocked"
+    t.string "iteration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
